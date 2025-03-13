@@ -24,6 +24,10 @@ pip install mysql-connector-python flask
 ## 🏃‍♂️ **How to Run the Project**  
 
 1️⃣ **Clone the Repository**  
+```bash
+git clone https://github.com/RujulPawar/Assistant-Management-API.git
+cd Assistant-Management-API
+```
 
 2️⃣ **Set Up Database**  
 - Open **`Credentials.py`** and replace:  
@@ -43,17 +47,6 @@ python Backend.py
 ```
 A **localhost URL** (e.g., `http://127.0.0.1:5000`) will be displayed. 
 
-## How to Test in Postman
-Install "HirademyAssignment.postman_collection.json" file. Open and click on import in Postman and select the json file you installed. Copy and paste the url that you got when you run the Backend.py file. Add following endpoints for the specified requests :
-
-GET - '/assistant/1' (This will retrieve the assistant details based on id. Here, id=1, change accordingly)
-
-POST - '/assistant' (This will create a new assistant. Json file includes a request body, make changes as per the assistant you want to add. Here, id=1, change accordingly)
-
-PUT - '/assistant/1' (This will update the assistant details based on id. Json file includes a request body, make changes that you want to update. Here, id=1, change accordingly)
-
-DELETE - '/assistant/1' (This will delete the assistant details based on id. Here, id=1, change accordingly)
-
 ## 🛠️ **How to Test the API in Postman**  
 
 **1️⃣ Import the Postman Collection**  
@@ -66,7 +59,8 @@ DELETE - '/assistant/1' (This will delete the assistant details based on id. Her
 ```http
 GET /assistant/{id}
 ```
-📌 **Example:** `/assistant/1`  
+📌 **Example:** `/assistant/2`
+![GET Assistant](Postman%20Screenshots/Get.png)
 
 ### ➟ **Create a New Assistant (POST)**  
 ```http
@@ -85,6 +79,7 @@ POST /assistant
   "department": "Full Stack"
 }
 ```
+![POST Assistant](Postman%20Screenshots/Post.png)
 
 ### ➟ **Update an Assistant (PUT)**  
 ```http
@@ -104,15 +99,20 @@ PUT /assistant/{id}
   "department": "Frontend"
 }
 ```
+![PUT Assistant](Postman%20Screenshots/Put.png)
 
 ### ➟ **Delete an Assistant (DELETE)**  
 ```http
 DELETE /assistant/{id}
 ```
-📌 **Example:** `/assistant/3`  
+📌 **Example:** `/assistant/4`  
+![DELETE Assistant](Postman%20Screenshots/Delete.png)
+
+## 📊 **Database State After CRUD Operations**
+The following screenshot shows the state of the MySQL database after each CRUD operation:
+![Database](Postman%20Screenshots/MySQL-Database.png)
 
 ---
-
 ## 📝 **Tech Stack**  
 🔹 **Python** (Flask)  
 🔹 **MySQL** (Database)  
